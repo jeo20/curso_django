@@ -1,0 +1,11 @@
+py -m venv .venv(con . queda arriba en la estructura)
+cd jeo\Scripts\activate
+pip install django -U
+django-admin startproject nombre_proyecto . (el punto lo pongo para que no repita una carpeta con el mismo nombre del proyecto)
+py manage.py runserver
+py manage.py migrations
+py manage.py migrate (lo hacemos cada vez que modifiquemos el modelo de datos)
+py manage.py createsuperuser
+py manage.py startapp nombre_de_la_app 
+pip freeze > requirements.txt
+pip install -r requirements.txt

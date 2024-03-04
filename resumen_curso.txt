@@ -1,0 +1,70 @@
+https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
+
+Crear entorno virtual:
+    py -m venv .venv(con . queda arriba en la estructura)
+    cd .venv\Scripts\activate
+
+Instalar Django:
+    pip install django -U
+
+Crear Proyecto de Django:
+    django-admin startproject nombre_proyecto . (el punto lo pongo para que no repita una carpeta con el mismo nombre del proyecto)
+
+Realizamos la primera migracion (la primera vez crea la base de datos):
+    py manage.py migrate (lo hacemos cada vez que modifiquemos el modelo de datos)
+
+Ejecutar el servidor localmente:
+    py manage.py runserver
+
+Creamos las vistas:
+    Creamos el archivo views.py adentro de holamundo (creamos la funcion que necesitemos en views.py)
+
+Creamos las urls
+    Creamos una  url para acceder a esa vista(siempre la terminamos con /), lo hacemos en urls.py  dentro de holamundo  y le asignamos al nombre "home"
+
+Rutas con parametros:
+    path('adulto/<int:edad>/', views.adulto, name='adulto') # La vista adulto recibe un parámetro edad, lo capturamos entre corchetes angulares <>.
+
+Uso de plantillas(PROYECTO PLANTILLAS):
+    definir ruta en 'DIRS': ['templates'] en TEMPLATES del archivo settings.py
+    creamos  una carpeta llamada "templates"
+    creamos  un archivo llamado siemple.html dentro de templates
+    para utilizarlo desde views debemos importar from django.shortcuts import render
+    creamos una funcion y devolvemos return render(request, "simple.html", {}), la funcion render(), recibe 3 parametros(request, pagina html, contexto)
+
+Contextos:
+    url definimos el path path('dinamico/<str:name>', views.dinamico, name="dinamico")
+    en views.py creamos una funcion que recibe (request, name)
+    definimos la variable context = {'name': name}, # guardamos un diccionario con el nombre como clave(name que recibimos de parametro) y lo pasamos al template
+    retorna render(request,"plantilla.html", context)
+    desde adentro dinamico.html para llamar una variable {{name}}
+
+Bucles y condicionales en plantillas:
+ciclo for en html y condicional if
+      {% for elemento in categories %} <!-- recorremos la lista categories que fue creado en la funcion dinamico(views.py) -->
+        {% if elemento == 'code'%} <!-- condicional if para buscar 'code' adentro de la lista -->
+            <li><b>{{ elemento }}</b></li> <!-- muestra en negrita el elemento code -->
+        {% else %} <!-- si no es 'code', lo muestra normal -->
+            <li>{{ elemento }}</li> <!-- muestra todos los elementos de la lista categories que no son igual a 'code'-->
+        {% endif %} <!-- cierra el  condicional if -->  
+      {% endfor %} <!-- cierra el ciclo for despues de recorrer toda la lista -->
+
+10 Comentarios y filtros
+{# comentario #} comentario de una linea que no se pinta (oculto)
+      {% for elemento in categories %} {# recorremos la lista categories que fue creado en la funcion dinamico(views.py) #}
+        {% if elemento == 'code'%} {# condicional if para buscar 'code' adentro de la lista #}
+            <li><b>{{ elemento }}</b></li> {# muestra en negrita el elemento code #}
+        {% else %} {# si no es 'code', lo muestra normal #}
+            <li>{{ elemento }}</li>{# muestra todos los elementos de la lista categories que no son igual a 'code' #}
+        {% endif %}{# cierra el  condicional if #} 
+      {% endfor %} {# cierra el ciclo for despues de recorrer toda la lista #}
+
+{% comment "" %}
+    Este comentario se ignora y no se muestra en pantalla
+    es
+    multilineas
+{% endcomment %}
+
+filtros
+    <h4>Total de categorias: {{categories|length}}</h4> {# filtro para contar el total de las categorias #}
+

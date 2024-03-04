@@ -1,0 +1,99 @@
+01 Presentación - Curso Django - OpenBootcamp
+
+02 Instalación - Curso Django - OpenBootcamp
+
+03 Patron de arquitectura - Curso Django - OpenBootcamp
+
+04 Estructura de archivos - Curso Django - OpenBootcamp
+
+05 Hola mundo - Curso Django - OpenBootcamp
+
+06 Rutas con parámetros - Curso Django - OpenBootcamp
+
+07 Uso de plantillas - Curso Django - OpenBootcamp
+
+08 Uso de contextos - Curso Django - OpenBootcamp
+
+09 Bucles y condicionales en plantillas - Curso Django - OpenBootcamp
+
+10 Comentarios y filtros - Curso Django - OpenBootcamp
+
+11 Archivos estaticos - Curso Django - OpenBootcamp
+
+12 Herencia de plantillas - Curso Django - OpenBootcamp
+
+13 Enlaces e inclusion - Curso Django - OpenBootcamp
+
+14 documentacion oficial - Curso Django - OpenBootcamp
+
+15 practica plantillas - Curso Django - OpenBootcamp
+
+16 modularizacion - Curso Django - OpenBootcamp
+
+17 modelos de datos - Curso Django - OpenBootcamp
+
+18 delegación de rutas - Curso Django - OpenBootcamp
+
+19 creacion y borrado de datos - Curso Django - OpenBootcamp
+
+20 estructura y claves foraneas - Curso Django - OpenBootcamp
+
+21 seeding y paquetes - Curso Django - OpenBootcamp
+
+22 consulta de datos I - Curso Django - OpenBootcamp
+
+23 consulta de datos II - Curso Django - OpenBootcamp
+
+24 actualizacion de datos - Curso Django - OpenBootcamp
+
+25 relaciones uno a uno - Curso Django - OpenBootcamp
+
+26 relaciones muchos a uno - Curso Django - OpenBootcamp
+
+27 relaciones muchos a muchos - Curso Django - OpenBootcamp
+
+28 conexion con postgresql - Curso Django - OpenBootcamp
+
+29 practica diseno modelo de datos - Curso Django - OpenBootcamp
+
+30 practica codificacion modelo de datos - Curso Django - OpenBootcamp
+
+31 formulario html get
+
+32 formulario html post
+
+33 formularios a traves de clases
+
+34 widget en formularios
+
+35 validacion de formularios
+
+36 formularios a partir de modelos
+
+37 practica formularios
+
+38 administracion de grupos y usuarios
+
+39 registrar modelos en panel de administracion
+
+40 uso de model admin
+
+41 practica enunciado estructura y modelos
+
+42 practica formularios estaticos y layouts
+
+43 practica admin buscador y listas
+
+44 practica crud contactos
+
+45 practica crud contactos parte 2
+
+46 practica crud tareas
+
+47 practica refactorizacion y busqueda por iniciales
+
+48 reutilizacion de aplicaciones
+
+49 utilidades mensajes y parametros opcionales
+
+50 utilidades y repaso final
