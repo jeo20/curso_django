@@ -73,3 +73,4 @@ Creando una clase Django convierte la clase en una tabla en la base de datos
 y cada atributo de la clase se convierte en un campo(columna) de esa tabla
 
 py manage.py makemigrations (lo hacemos cada vez que modifiquemos el modelo de datos o creemos un nuevo modelo)
+luego de makemigrations, debemos  hacer py manage.py migrate
