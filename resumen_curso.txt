@@ -75,3 +75,8 @@ y cada atributo de la clase se convierte en un campo(columna) de esa tabla
 py manage.py makemigrations (lo hacemos cada vez que modifiquemos el modelo de datos o creemos un nuevo modelo)
 luego de makemigrations, debemos  hacer py manage.py migrate
 django siempre crea un campo id como primary key
+
+
+Para vincular las rutas de una aplicacion en el proyecto principal
+en urls.py del proyecto principal hay que importar la url de la app
+y agregar ahi la url de la vista
