@@ -85,3 +85,7 @@ y agregar ahi la url de la vista
 OBJETO.objects.create(paramentros) # crea el objeto y lo guarda en la base de datos automaticamente
 
 py manage.py check post # para chequear la aplicacion
+
+
+https://github.com/Brobin/django-seed
+py manage.py seed post --number=50 # crea 50 entradas en las tablas de post
