@@ -80,6 +80,10 @@ django siempre crea un campo id como primary key
 Para vincular las rutas de una aplicacion en el proyecto principal
 en urls.py del proyecto principal hay que importar la url de la app
 y agregar ahi la url de la vista
+<<<<<<< HEAD
 
 
 OBJETO.objects.create(paramentros) crea el objeto y lo guarda en la base de datos automaticamente
+=======
+nada
+>>>>>>> 97eb55ba06136644bb04ec34d15b82e856ef55cf
