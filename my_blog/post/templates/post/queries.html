@@ -7,11 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Todos los Autores </h1>
+    <h3> Obteniendo un unico elemento(filtrado por id)</h3>
+    <p> {{author}} </p>
+    <h3> Buscando Autor de email igual a lynn58@example.net</h3>
+    <ul>
+        {% for email in filtered %}
+        <li>{{email.name}} - {{email.email}} </li>
+        {% endfor %}
+    <h3> Todos los Autores </h3>
     <ul> 
         {% for author in authors %}
         <li>{{author.name}} ({{author.email}})</li>
         {% endfor %}
     </ul>    
+    <h3> Total  de autores: {{authors|length}}  </h3>
 </body>
 </html>
