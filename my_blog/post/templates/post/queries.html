@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Proyecto Post</title>
 </head>
 <body>
+    <h3>Obtener 5 elementos saltando los primeros 5 con offset</h3>
+    {% for offset in offsets %}
+        <li>{{offset.email}}</li>
+    {% endfor %}    
+    <h3>Obtener los 10 primeros (limit)</h3>
+    <ul>
+        {% for limit in limits %}
+            <li>{{limit.email}}</li>
+        {% endfor %}
+    </ul>
     <h3> Obteniendo un unico elemento(filtrado por id)</h3>
     <p> {{author}} </p>
     <h3> Buscando Autor de email igual a lynn58@example.net</h3>
