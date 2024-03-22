@@ -90,4 +90,11 @@ py manage.py check post # para chequear la aplicacion
 https://github.com/Brobin/django-seed
 py manage.py seed post --number=50 # crea 50 entradas en las tablas de post
 
-
+operadores en las vistas
+id__lte  : menor o igual que
+id__lt   : menor que
+id__gt  : mayor que
+id__gte  : mayor o igual que
+id__exact : exactamente igual a
+id__contains : contiene
+id__in   : entre varios valores (listado separados por comas)
