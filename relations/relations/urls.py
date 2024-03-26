@@ -19,5 +19,6 @@ from django.urls import path, include # importo include para utilizarlo en el pa
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('one/', include('onetoone.urls')) # url one de la aplicacion onetoone
+    path('one/', include('onetoone.urls')), # url one de la aplicacion onetoone
+    path('many/',include('manytoone.urls'))#
 ]

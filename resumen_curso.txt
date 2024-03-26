@@ -98,3 +98,6 @@ id__gte  : mayor o igual que
 id__exact : exactamente igual a
 id__contains : contiene
 id__in   : entre varios valores (listado separados por comas)
+
+
+el nombre de la tabla siempre es (nombre de la aplicacion)_(nombre de la clase) manytoone_reporter
