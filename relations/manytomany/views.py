@@ -46,6 +46,12 @@ def create(request):
     art3.publications.add(pub6) # Agrego la publicación "pub6" al articulo art3    
     art3.publications.add(pub7) # Agrego la publicación "pub7" al articulo art3
 
-####  Consultas de ejemplo ####
+####  Consultas de ejemplo para un articulo 1 ####
+#    art1.publications.remove(pub1) # Elimino la publicación "pub1" del articulo art1
     result =  art1.publications.all() # Devuelve todas las publicaciones relacionadas con el articulo art1
+    
+#### Consulta para buscar un articulo especifico por id ( Hay que borrar todo lo anterior) 
+
+#    pub1 = Publication.objects.get(id = 1) # Obtengo la publicacion con id = 1
+#    result = pub1.article_set.all() # Devuelve todas las publicaciones relacionadas con la publicacion pub1
     return HttpResponse(result)
