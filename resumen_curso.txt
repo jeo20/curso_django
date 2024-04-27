@@ -101,3 +101,20 @@ id__in   : entre varios valores (listado separados por comas)
 
 
 el nombre de la tabla siempre es (nombre de la aplicacion)_(nombre de la clase) manytoone_reporter
+
+PARA USAR POSTGRESQL
+    PRIMERO CREAR BD VACIA (USUARIO Y CONTRASEÑA)
+    EN SETINGS.PY USAR
+
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": "mydatabase",
+            "USER": "mydatabaseuser",
+            "PASSWORD": "mypassword",
+            "HOST": "127.0.0.1",
+            "PORT": "5432",
+        }
+    }
+
+    luego desde la consola py manage.py migrate
