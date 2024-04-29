@@ -9,7 +9,8 @@
     <h1>Formulario Django</h1>
     <hr>
     <table>
-        <form action={% url 'goal'%} method='GET'>
+        <form action={% url 'goal'%} method='POST'>
+            {% csrf_token %} {# se usa siempre para metodo POST#}
             {{ coment_form.as_table }} {# formulario comment_form lo defino que lo muestre como tabla #}
             <input type="submit" value="Enviar">
         </form>
