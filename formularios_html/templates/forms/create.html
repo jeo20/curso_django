@@ -1,0 +1,5 @@
+<form action = "{% url 'postgoal'%}" method="POST"> {# POST envia la informacion enencriptada #}
+    {% csrf_token %} {# csrf_token para proteccion #}
+    <input type="text" name="info" placeholder="Escribe algo...">
+    <input type="submit" value="Enviar">
+ </form>
