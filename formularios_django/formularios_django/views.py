@@ -13,5 +13,13 @@ def goal(request): # funcion que recibe el formulario
     return HttpResponse(request.POST['name']) # devuelve el nombre del campo name del formulario
 
 def widget(request):# vista widget, recibe la request del formulario y la muestra en una pagina html
-    form = ContactForm
-    return render(request, 'widget.html', {'form': form})
+    if request.method == 'GET':
+        form = ContactForm()
+        return render(request, 'widget.html', {'form': form})
+    
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid(): # comprueba si el formulario recibido es valido (valida los campos del formulario)
+            return HttpResponse("Valido")
+        else:
+            return render(request, 'widget.html', {'form': form})       
