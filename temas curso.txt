@@ -3,6 +3,10 @@
 02 Instalación - Curso Django - OpenBootcamp
 
 03 Patron de arquitectura - Curso Django - OpenBootcamp
+    Patron MTV (Modelo-Template-Vista)
+    • Modelo: define la estructura lógica de los datos y es el controlador de datos entre la base de datos y la Vista.
+    • Plantilla: es la capa de presentación. Django utiliza un sistema de plantillas de texto simple que guarda todo lo que el navegador muestra.
+    • Vista: se comunica con la base de datos a través del Modelo y transfiere los datos a la Plantilla para su visualización.
 
 04 Estructura de archivos - Curso Django - OpenBootcamp
 
