@@ -1,3 +1,5 @@
+https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
+
 01 Presentación - Curso Django - OpenBootcamp
 
 02 Instalación - Curso Django - OpenBootcamp
@@ -5,16 +7,149 @@
 03 Patron de arquitectura - Curso Django - OpenBootcamp
     Patron MTV (Modelo-Template-Vista)
     • Modelo: define la estructura lógica de los datos y es el controlador de datos entre la base de datos y la Vista.
-    • Plantilla: es la capa de presentación. Django utiliza un sistema de plantillas de texto simple que guarda todo lo que el navegador muestra.
+    • Template: es la capa de presentación. Django utiliza un sistema de plantillas de texto simple que guarda todo lo que el navegador muestra.
     • Vista: se comunica con la base de datos a través del Modelo y transfiere los datos a la Plantilla para su visualización.
 
 04 Estructura de archivos - Curso Django - OpenBootcamp
 
-05 Hola mundo - Curso Django - OpenBootcamp
+    Crear Proyecto de Django:
+        django-admin startproject nombre_proyecto . (el punto lo pongo para que no repita una carpeta con el mismo nombre del proyecto)
 
+    ARCHIVOS POR DEFECTO EN TODOS LOS PROYECTOS:
+    
+    __INIT__.PY:
+        Se crea el archivo __init__.py en todas las aplicaciones para poder ser tratado como un modulo
+
+    MANAGE.PY:
+        El archivo manage.py es una herramienta fundamental en el desarrollo de aplicaciones con Django. 
+        Es un script de Python que se encarga de ejecutar diversos comandos administrativos relacionados con la gestión del proyecto, 
+        la base de datos, el servidor y las aplicaciones.
+
+        Funciones principales:
+
+        Administración del proyecto:
+            Creación de nuevas aplicaciones.
+            Ejecución de migraciones de la base de datos.
+            Creación de superusuarios.
+            Impresión de información del proyecto.
+            
+        Gestión de la base de datos:
+            Creación, eliminación y sincronización de la base de datos.
+            Ejecución de comandos SQL.
+            Aplicación de migraciones.
+            
+        Control del servidor:
+            Iniciar, detener y reiniciar el servidor de desarrollo.
+            Crear un servidor de producción.
+            Administración de aplicaciones:
+            Creación, eliminación e instalación de aplicaciones.
+            Ejecución de comandos específicos de cada aplicación.
+
+    ASGI.PY:
+        El archivo asgi.py es un punto de entrada crucial para que los servidores web compatibles con ASGI (Asynchronous Server Gateway Interface) 
+        puedan servir una aplicación Django. ASGI es un estándar que define cómo los servidores web y las aplicaciones web interactúan
+        de forma asíncrona, lo que permite un mejor rendimiento y escalabilidad.
+
+        Funciones principales:
+
+        Punto de entrada para ASGI: Define la interfaz que el servidor web utiliza para comunicarse con la aplicación Django.
+        Enrutamiento de solicitudes: Mapea las URLs a las vistas correspondientes de la aplicación.
+        Manejo de diferentes tipos de aplicaciones: Permite ejecutar aplicaciones ASGI y WSGI (Web Server Gateway Interface) dentro del mismo proyecto.
+        Configuración de middleware: Define qué middleware se debe ejecutar para cada solicitud.
+    
+    WSGI.PY:
+        El archivo wsgi.py es un componente crucial para ejecutar una aplicación Django con servidores web que implementan 
+        la interfaz WSGI (Web Server Gateway Interface). WSGI define un estándar para la comunicación entre servidores web y aplicaciones web,
+        permitiendo la interoperabilidad entre diferentes tecnologías.
+
+        Funciones principales:
+
+        Punto de entrada para WSGI: Define la interfaz que el servidor web utiliza para comunicarse con la aplicación Django.
+        Enrutamiento de solicitudes: Mapea las URLs a las vistas correspondientes de la aplicación.
+        Manejo de diferentes tipos de aplicaciones: Permite ejecutar aplicaciones WSGI y ASGI (Asynchronous Server Gateway Interface)
+        dentro del mismo proyecto.
+        Configuración de middleware: Define qué middleware se debe ejecutar para cada solicitud
+
+    SETTING.PY:
+        El archivo settings.py es el archivo de configuración central de una aplicación Django. 
+        Es donde se definen las variables y opciones que controlan el comportamiento de la aplicación en diferentes aspectos, como:
+
+        Configuración de la base de datos:
+            Tipo de base de datos (MySQL, PostgreSQL, etc.)
+            Nombre de la base de datos
+            Usuario y contraseña de la base de datos
+            Host y puerto de la base de datos
+            
+        Configuración del servidor web:
+            Puerto en el que se ejecuta la aplicación
+            Modo de depuración
+            Entorno de desarrollo o producción
+
+        Configuración de aplicaciones:
+            Lista de aplicaciones instaladas en el proyecto
+            Clases de configuración específicas de cada aplicación
+
+        Configuración de seguridad:
+            Clave secreta para la generación de cookies y tokens
+            Algoritmos de hash para contraseñas
+            Permisos y restricciones de acceso
+
+        Configuración de internacionalización:
+            Idioma por defecto
+            Zona horaria
+            Formato de fecha y hora
+
+        Configuración de correo electrónico:
+            Servidor SMTP
+            Usuario y contraseña del servidor SMTP
+            Remitente por defecto
+
+        Configuración de archivos estáticos:
+            Directorio donde se almacenan los archivos estáticos
+            URL pública para acceder a los archivos estáticos
+
+    URLS.PY:
+        El archivo urls.py juega un papel crucial en la configuración de una aplicación Django al definir 
+        el enrutamiento de las URLs a las vistas correspondientes. 
+        Es la piedra angular que permite que la aplicación responda a las solicitudes del usuario de manera organizada y eficiente.
+
+        Funciones principales:
+
+        Enrutamiento de URLs: Define una lista de patrones de URL que se mapean a las vistas de la aplicación.
+        Importación de vistas: Permite importar las vistas desde diferentes módulos de la aplicación.
+        Manejo de diferentes tipos de solicitudes: Permite definir diferentes patrones para solicitudes GET, POST, PUT, DELETE, etc.
+        Configuración de nombres de URL: Asigna nombres únicos a las URLs para facilitar su uso en otras partes de la aplicación.
+        Inclusión de otras configuraciones de URL: Permite dividir la configuración de URL en diferentes archivos para mayor organización.
+
+
+05 Hola mundo - Curso Django - OpenBootcamp
+    
+    Realizamos la primera migracion (la primera vez crea la base de datos y cada vez que modifiquemos la estructura de datos):
+        py manage.py migrate
+    
+    Ejecutar el servidor localmente:
+        py manage.py runserver
+
+    Creamos las vistas:
+        Creamos el archivo views.py (contienen la logica y se definen las funciones que se necesiten)
+    
+    Creamos las urls
+        Creamos una  url para acceder a esa vista(siempre la terminamos con /), lo hacemos en urls.py  
+        dentro de holamundo  y le asignamos el mismo nombre de la funcion
+
+    
 06 Rutas con parámetros - Curso Django - OpenBootcamp
+    path('adulto/<int:edad>/', views.adulto, name='adulto')
+    # La vista adulto recibe un parámetro edad, lo capturamos entre corchetes angulares <>.
+
 
 07 Uso de plantillas - Curso Django - OpenBootcamp
+    definir ruta en 'DIRS': ['templates'] en TEMPLATES del archivo settings.py
+    creamos  una carpeta llamada "templates"
+    creamos  un archivo llamado simple.html dentro de templates
+    para utilizarlo desde views debemos importar: from django.shortcuts import render
+    creamos una funcion y devolvemos: return render(request, "simple.html", {}), la funcion render(), recibe 3 parametros(request, pagina html, contexto)
+
 
 08 Uso de contextos - Curso Django - OpenBootcamp
 
