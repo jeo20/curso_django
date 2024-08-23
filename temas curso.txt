@@ -152,6 +152,11 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
 
 
 08 Uso de contextos - Curso Django - OpenBootcamp
+    url definimos el path path('dinamico/<str:name>', views.dinamico, name="dinamico")
+    en views.py creamos una funcion que recibe (request, name)
+    definimos la variable context = {'name': name}, # guardamos un diccionario con el nombre como clave(name que recibimos de parametro) y lo pasamos al template
+    retorna render(request,"plantilla.html", context)
+    desde adentro dinamico.html para llamar una variable {{name}}
 
 09 Bucles y condicionales en plantillas - Curso Django - OpenBootcamp
 
