@@ -244,6 +244,13 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
     
 
 17 modelos de datos - Curso Django - OpenBootcamp
+    Creando una clase Django convierte la clase en una tabla en la base de datos 
+    y cada atributo de la clase se convierte en un campo(columna) de esa tabla en models.py
+
+    py manage.py makemigrations (lo hacemos cada vez que modifiquemos el modelo de datos o creemos un nuevo modelo)
+    luego de makemigrations, debemos  hacer py manage.py migrate django siempre crea un campo id como primary key
+
+    crea en la base de datos la tabla comentarios_comments (nombredeaplicacion_nombredeclase)
 
 18 delegación de rutas - Curso Django - OpenBootcamp
 
