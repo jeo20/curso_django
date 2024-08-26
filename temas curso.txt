@@ -175,7 +175,7 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
 
 10 Comentarios y filtros - Curso Django - OpenBootcamp
     {# comentario #} comentario de una linea que no se pinta (oculto)
-    
+
     {% comment "" %}
         Este comentario se ignora y no se muestra en pantalla
         es
@@ -183,6 +183,19 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
     {% endcomment %}
 
 11 Archivos estaticos - Curso Django - OpenBootcamp
+   Archivos css, javascript, imagenes, audios, etc.
+   
+   en el archivo settings.py, en STATIC_URL = 'static/' definimos la ruta adonde van a estar los archivos estaticos
+   creamos una carpeta llamada static en la raiz del proyecto
+
+   en el archivo html tenemos que usar {% load static %} {# defino que se va a utilizar contenido de la carpeta static #}
+   href={% static "styles.css" %} # para usar el archivo styles.css
+
+   crear en settings.py la variable de entorno
+        STATICFILES_DIRS = [ # directorio de  los archivos estáticos
+            BASE_DIR /"static", #  directorio raiz  de la carpeta static en el proyecto
+            '/var/www/static/' # directorio para produccion 
+        ]
 
 12 Herencia de plantillas - Curso Django - OpenBootcamp
 
