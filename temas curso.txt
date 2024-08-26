@@ -219,6 +219,7 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
         desde base.html incluir {% include "layouts/partials/footer.html" %} 
 
 14 documentacion oficial - Curso Django - OpenBootcamp
+    https://docs.djangoproject.com/es/5.0/
 
 15 practica plantillas - Curso Django - OpenBootcamp
 
