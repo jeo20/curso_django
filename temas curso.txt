@@ -162,6 +162,16 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
     desde adentro dinamico.html para llamar una variable {{name}}
 
 09 Bucles y condicionales en plantillas - Curso Django - OpenBootcamp
+    En Django, puedes utilizar los bucles y condicionales de Python en tus plantillas.
+    ciclo for en html y condicional if
+    **********************************
+      {% for elemento in categories %} <!-- recorremos la lista categories que fue creado en la funcion dinamico(views.py) -->
+        {% if elemento == 'code'%} <!-- condicional if para buscar 'code' adentro de la lista -->
+            <li><b>{{ elemento }}</b></li> <!-- muestra en negrita el elemento code -->
+        {% else %} <!-- si no es 'code', lo muestra normal -->
+            <li>{{ elemento }}</li> <!-- muestra todos los elementos de la lista categories que no son igual a 'code'-->
+        {% endif %} <!-- cierra el  condicional if -->  
+      {% endfor %} <!-- cierra el ciclo for despues de recorrer toda la lista -->
 
 10 Comentarios y filtros - Curso Django - OpenBootcamp
 
