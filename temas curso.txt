@@ -207,13 +207,16 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
     creamos la carpeta(adentro de templates) layouts,  la plantilla padre que definamos(base.html)
     en base.html definir los bloques para el contenido de cada plantilla
     en la plantilla extender {% extends "./layouts/base.html" %}
-    desde la plantilla usar {% block title %} Herencia {% endblock %} para cambiar el bloque 
-    
-
-
-
-
+    desde la plantilla usar {% block title %} Herencia {% endblock %} para cambiar el bloque
+        
 13 Enlaces e inclusion - Curso Django - OpenBootcamp
+    <li><a href= "{% url 'herencia' %}">Herencia</a></li>  {# link a herencia por name definido en urls.py #}
+    
+    modularizar el menu y footer
+        crear carpeta partials adentro de layouts
+        crear menu.html y footer.html
+        desde base.html incluir {% include "layouts/partials/menu.html" %} 
+        desde base.html incluir {% include "layouts/partials/footer.html" %} 
 
 14 documentacion oficial - Curso Django - OpenBootcamp
 
