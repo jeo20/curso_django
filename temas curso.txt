@@ -222,6 +222,17 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
     https://docs.djangoproject.com/es/5.0/
 
 15 practica plantillas - Curso Django - OpenBootcamp
+    crear una sitio con 2 paginas(portfolio de un fotografo)
+        definir rutas en settings.py (templates y static)
+        crear url en urls.py
+        crear vistas en views.py
+        crear carpetas templates y static
+        crear index.html y porftolio.html adentro de carpeta templates
+        crear carpeta layouts adentro de carpeta templates
+        crear archivo base.html en la carpeta layouts
+        crear la carpeta partials en la carpeta layouts
+        en el archivo base.html definir los bloques, menu, footer
+        estilos css
 
 16 modularizacion - Curso Django - OpenBootcamp
 
