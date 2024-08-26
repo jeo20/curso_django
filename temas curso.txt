@@ -235,6 +235,13 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
         estilos css
 
 16 modularizacion - Curso Django - OpenBootcamp
+    modularizar siempre
+    se puede usar una aplicacion de un proyecto en otro proyecto
+    py manage.py startapp nombre_aplicacion(comentarios)
+    en settings.py agregar en INSTALLED_APPS
+        'comentarios', # Agrego la aplicacion comentarios
+    py manage.py check comentarios # chequea que la aplicacion este correctamente instalada
+    
 
 17 modelos de datos - Curso Django - OpenBootcamp
 
