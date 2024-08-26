@@ -174,6 +174,13 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
       {% endfor %} <!-- cierra el ciclo for despues de recorrer toda la lista -->
 
 10 Comentarios y filtros - Curso Django - OpenBootcamp
+    {# comentario #} comentario de una linea que no se pinta (oculto)
+    
+    {% comment "" %}
+        Este comentario se ignora y no se muestra en pantalla
+        es
+        multilineas
+    {% endcomment %}
 
 11 Archivos estaticos - Curso Django - OpenBootcamp
 
