@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Post</title>
+</head>
+<body>
+    <h3> Obtener todos los autores que contienen en su nombre la palabra yes</h3>
+        {% for contain in contains %}
+            <li>{{contain.name}} </li>
+        {% endfor %}     
+    <h3> Buscando elementos cuyo id sea igual o menor a 15</h3>
+        {% for email in filtered %}
+            <li>{{email.email}} </li>
+        {% endfor %}    
+    <h3>Obtener todos elementos ordenados por email</h3>
+    {% for order in orders %}
+        <li>{{order.email}}</li>
+    {% endfor %}       
+    <h3>Obtener 5 elementos saltando los primeros 5 con offset</h3>
+    {% for offset in offsets %}
+        <li>{{offset.email}}</li>
+    {% endfor %}    
+    <h3>Obtener los 10 primeros (limit)</h3>
+        {% for limit in limits %}
+            <li>{{limit.email}}</li>
+        {% endfor %}
+    <h3> Obteniendo un unico elemento(filtrado por id)</h3>
+    <p> {{author}} </p>
+    <h3> Buscando Autor de email igual a lynn58@example.net</h3>
+
+        {% for email in filtered %}
+            <li>{{email.name}} - {{email.email}} </li>
+        {% endfor %}
+    <h3> Todos los Autores </h3>
+        {% for author in authors %}
+            <li>{{author.name}} ({{author.email}})</li>
+        {% endfor %}   
+    <h3> Total  de autores: {{authors|length}}  </h3>
+</body>
+</html>

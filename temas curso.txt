@@ -306,6 +306,20 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
     
 
 22 consulta de datos I - Curso Django - OpenBootcamp
+    definir la consulta en views.py
+        # obtener todos los elementos
+        authors = Author.objects.all()
+
+    pasar contexto authors
+            return render(request, 'post/queries.html',{'authors':authors})
+
+    pintar en queries.html
+        <h3> Todos los Autores </h3>
+        {% for author in authors %}
+            <li>{{author.name}} ({{author.email}})</li>
+        {% endfor %} 
+
+     
 
 23 consulta de datos II - Curso Django - OpenBootcamp
 
