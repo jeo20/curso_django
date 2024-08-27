@@ -264,6 +264,19 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
 
 
 19 creacion y borrado de datos - Curso Django - OpenBootcamp
+    en views.py de la aplicacion importo from .models import Comment
+    en views.py de la aplicacion creo la vista que crea un nuevo comentario
+    Crear:
+        comment = Comment(name="Jorge", score = 5, comment = "Este es un comentario") # forma manual
+        comment.save() # Guardo manualmente el objeto comment en la base de datos
+        comment = Comment.objects.create(name = "Eduardo") #  Crea un objeto y guarda en la BD con los valores que le pasamos por parámetros
+
+    Borrar:
+        comment =  Comment.objects.get(id=1)  # Busco manualmente al comentario con id  1, si no existe lanza una excepción
+        comment.delete() # Elimino manualmente el comentario id = 1, obtenido en el paso anterior
+        comment = Comment.objects.filter(id=2).delete()  # Filtro los comentarios por su ID y elimino todos que coincidan
+    
+
 
 20 estructura y claves foraneas - Curso Django - OpenBootcamp
 
