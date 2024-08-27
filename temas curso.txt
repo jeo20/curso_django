@@ -279,6 +279,15 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
 
 
 20 estructura y claves foraneas - Curso Django - OpenBootcamp
+    Una clave foránea en Django es una relación entre dos modelos que representa una conexión de uno a muchos. 
+    Es decir, un modelo (el "hijo") referencia a otro modelo (el "padre") para establecer una dependencia o asociación.
+    En el modelo hijo, se define la clave foránea con el atributo ForeignKey
+    creo los modelos Author y Entry
+    author = models.ForeignKey(Author, on_delete = models.CASCADE) 
+    # Defino la clave foranea de la clase Author en la clase Entry, va a asignar el id del autor que escriba la entrada
+    # on_delete = models.CASCADE es para que cuando se borre un autor, todos sus entries tambien lo hagan
+
+
 
 21 seeding y paquetes - Curso Django - OpenBootcamp
 
