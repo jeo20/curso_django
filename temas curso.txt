@@ -290,6 +290,20 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
 
 
 21 seeding y paquetes - Curso Django - OpenBootcamp
+    Repositorio:
+        https://github.com/Brobin/django-seed
+
+    Instalar:
+        pip install django-seed
+
+    Agregar aplicacion:
+        INSTALLED_APPS = (
+        ...
+        'django_seed',
+        )
+    
+    py manage.py seed post(nombre de la aplicacion) --number=50 # crea 50 entradas en las tablas de post
+    
 
 22 consulta de datos I - Curso Django - OpenBootcamp
 
