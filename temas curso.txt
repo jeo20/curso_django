@@ -253,6 +253,15 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
     crea en la base de datos la tabla comentarios_comments (nombredeaplicacion_nombredeclase)
 
 18 delegación de rutas - Curso Django - OpenBootcamp
+    crear el archivo urls.py en la aplicacion (comentarios)
+    definir ruta test
+    en views.py de la aplicacion crear la vista test
+
+    en urls.py general del proyecto añadimos el nuevo path que apunta a la aplicacion(comentarios), luego incluir include en la importacion
+
+    Para vincular las rutas de una aplicacion en el proyecto principal en urls.py del proyecto principal hay que importar
+    la url de la app y agregar ahi la url de la vista
+
 
 19 creacion y borrado de datos - Curso Django - OpenBootcamp
 
