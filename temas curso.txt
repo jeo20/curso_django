@@ -343,6 +343,17 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
 
 24 actualizacion de datos - Curso Django - OpenBootcamp
 
+en url de post:
+        path('update/', views.update, name='update')
+
+en views.py de post:
+    def update(request):
+        author = Author.objects.get(id=1)
+        author.name = "Jorge Orellana"
+        author.email = "email@email.com.ar"
+        author.save()
+        return HttpResponse("Modificado")
+
 25 relaciones uno a uno - Curso Django - OpenBootcamp
 
 26 relaciones muchos a uno - Curso Django - OpenBootcamp
