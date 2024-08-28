@@ -365,6 +365,24 @@ en views.py de post:
     # models.OneToOneField(nombre del modelo para aplicar la relacion (obligatorio),on_delete=models.CASCADE, primary_key = True)
 
 26 relaciones muchos a uno - Curso Django - OpenBootcamp
+    Articulo - Reportero
+    reporter = models.ForeignKey(Reporter, on_delete=models.CASCADE) # clave foranea a la tabla Reporter
+    # models.ForeignKey(nombre del modelo para aplicar la relacion (obligatorio),on_delete=models
+    el nombre de la tabla siempre es (nombre de la aplicacion)_(nombre de la clase) manytoone_reporter
+
+    # reportero
+    rep = Reporter(first_name="Jorge", last_name="Orellana", email="jorge@gmail.com")
+    rep.save()
+    
+    # articulo 1
+    art1 =Article(headline="Noticias 1", pub_date= date(2021,4,17), reporter=rep)
+    art1.save()
+
+    #Articulo a Reportero
+    result = art1.reporter.first_name +" "+ art1.reporter.last_name # devuelve  el nombre del periodista que creo el primer articulo
+
+    #Reportero a Articulo
+    result = rep.article_set.all( ) # devuelve todos los articulos del periodista Jorge Orellana
 
 27 relaciones muchos a muchos - Curso Django - OpenBootcamp
 
