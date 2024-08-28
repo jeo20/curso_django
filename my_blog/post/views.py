@@ -27,7 +27,7 @@ def queries(request):
     filtered = Author.objects.filter(id__lte=15) #SELECT * FROM authors WHERE id<=15;
     
     # obtener todos los autores que contienen en su nombre la palabra yes
-    contains = Author.objects.filter(name__contains="yes")
+    contains = Author.objects.filter(name__contains="yes") #SELECT * FROM Author WHERE name LIKE '%yes%';
     
     # Retorna render de la request al template  "queries.html" con el contexto definido entre llaves {} de cada metodo
     return render(request, 'post/queries.html',{'authors':authors, 'filtered': filtered, 'author': author, 'limits': limits, 'offsets': offsets, 'orders': orders, 'contains': contains})

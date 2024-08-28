@@ -319,9 +319,27 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
             <li>{{author.name}} ({{author.email}})</li>
         {% endfor %} 
 
-     
-
+    
 23 consulta de datos II - Curso Django - OpenBootcamp
+
+    Operadores en las vistas:
+        (nombre del campo)__lte  : menor o igual que
+        (nombre del campo)__lt   : menor que
+        (nombre del campo)__gt  : mayor que
+        (nombre del campo)__gte  : mayor o igual que
+        (nombre del campo)__exact : exactamente igual a
+        (nombre del campo)__contains : contiene
+        (nombre del campo)__in   : entre varios valores (listado separados por comas)
+
+    # obtener todos los elementos ordenados
+    orders = Author.objects.all().order_by(('email')) # SELECT * FROM authors ORDER BY  email;
+
+    # obtener datos filtrados por condicion
+    filtered = Author.objects.filter(id__lte=15) #SELECT * FROM authors WHERE id<=15;
+    
+    # obtener todos los autores que contienen en su nombre la palabra yes
+    contains = Author.objects.filter(name__contains="yes") #SELECT * FROM Author WHERE name LIKE '%yes%';
+
 
 24 actualizacion de datos - Curso Django - OpenBootcamp
 
