@@ -355,6 +355,14 @@ en views.py de post:
         return HttpResponse("Modificado") #  Retorna una respuesta HTTP con un mensaje de texto
 
 25 relaciones uno a uno - Curso Django - OpenBootcamp
+    crear aplicacion onetoone
+    en settings.py agregar la aplicacion onetoone
+    en urls.py general definir el path de la aplicacion onetoone
+    crear urls.py en onetoone
+    crear modelos en models.py
+
+    place =  models.OneToOneField(Place, on_delete=models.CASCADE, primary_key = True) #Llave foranea a la clase Place
+    # models.OneToOneField(nombre del modelo para aplicar la relacion (obligatorio),on_delete=models.CASCADE, primary_key = True)
 
 26 relaciones muchos a uno - Curso Django - OpenBootcamp
 
