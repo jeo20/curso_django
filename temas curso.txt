@@ -385,6 +385,16 @@ en views.py de post:
     result = rep.article_set.all( ) # devuelve todos los articulos del periodista Jorge Orellana
 
 27 relaciones muchos a muchos - Curso Django - OpenBootcamp
+    Publicacion - Articulo
+
+    publications = models.ManyToManyField(Publication) #Relación muchos a muchos con la clase Publication
+    # para la relacion muchos a muchos no hay que definir un metodo de borrado on_delete porque se almacenan en una tabla aparte
+    primero guardar las tablas(modelos) que vamos a utilizar
+    django crea una tercera tabla(modelos) para relacionar las 2 tablas creadas:
+        manytomany_article (tabla1)
+        manytomany_publication (tabla2)
+        manytomany_article_publication (contiene article_id y publication_id y relaciona 2 tablas article y publication)
+    
 
 28 conexion con postgresql - Curso Django - OpenBootcamp
 
