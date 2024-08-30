@@ -413,8 +413,11 @@ en views.py de post:
     luego desde la consola py manage.py migrate
 
 29 practica diseño modelo de datos - Curso Django - OpenBootcamp
+    enunciado practica
+    graficar modelo de datos y las relaciones (uno a muchos)
 
 30 practica codificacion modelo de datos - Curso Django - OpenBootcamp
+
 
 31 formulario html get
 

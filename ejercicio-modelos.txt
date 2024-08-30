@@ -1,0 +1,18 @@
+supongamos que somos un desarrollador backen y se nos entrega el siguiente pedido estamos realizando un proyecto para una multinacional 
+y su software de gestión nos han solicitado una aplicación en Django para incluir el proyecto que debe hacer lo siguiente debe llevar un control 
+de los empleados teniendo el nombre el dni de cada empleado el email su dirección su puesto de trabajo y la ubicación a la que pertenece
+es decir en qué fábrica está trabajando el puesto de trabajo además en el que trabaja va a tener siempre una descripción del cargo y además
+del propio cargo y un salario asociado los salarios pueden ser pueden pertenecer a uno diferentes puestos de trabajo y van a incluir siempre
+Cuál es el Bruto anual a cobrar y si tienen o no tienen asociada una paga extra en diciembre y en junio la paga de verano y de Navidad 
+pues van a ser ubicaciones en las cuales vamos a estar registrando el nombre la dirección el código postal y la población a la que pertenecen
+estas poblaciones además estarán recogidas o estarán agrupadas por país Muy bien pues Estas son las indicaciones tenemos somos desarrolladores 
+backend,  tenemos un cliente este cliente no es una multinacional que tiene fábricas en diferentes ubicaciones y nos ha solicitado 
+que llevemos un control de los empleados A qué fábrica están perteneciendo que cargo tienen y que es salario tiene cada uno de ellos 
+nuestra función dentro del equipo de desarrollo va a ser realizar el modelo de datos el modelado de datos en nuestra aplicación Django 
+y vamos a incluirlo todo en una única aplicación puesto que el resto de compañeros están trabajando en el resto de aplicaciones 
+que van a conformar el proyecto final aunque se escapa del scope del alcance del curso vamos a hacer antes de comenzar a trabajar
+antes de comenzar a escribir el código un pequeño diagrama que nos ayude a colocar cada uno de los elementos si nos adentraremos 
+En la materia de bases de datos deberíamos estar realizando un diagrama de entidad relación y luego formalizar las tablas 
+en su tercera forma normal para posteriormente comenzar a codificar los datos como este no es el objetivo del curso sí que al menos
+vamos a hacer un pequeño diagrama para colocar un mapa de trabajo antes de comenzar a trabajar los modelos para que podamos detectar 
+cualquier fallo en el papel en el diseño antes de comenzar su codificación.
