@@ -417,6 +417,12 @@ en views.py de post:
     graficar modelo de datos y las relaciones (uno a muchos)
 
 30 practica codificacion modelo de datos - Curso Django - OpenBootcamp
+    creamos aplicacion company
+    en settings.py agregamos aplicacion company
+    en settings definimos la conexion de BD postgresql
+    en postgresql creamos la BD company
+    py manage.py migrate
+    verificar el orden de los modelos para que no tenga errores en las relaciones
 
 
 31 formulario html get
