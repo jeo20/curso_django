@@ -426,14 +426,18 @@ en views.py de post:
 
 
 31 formulario html get
+    GET envía los datos usando la URL(de forma no segura)
     formularios html
         crear carpeta forms para guardar solamente los formularios
         {% include "forms/contact.html" %}
         <form action = "{% url 'goal'%}" method="GET">, definir la accion y el verbo(metodo)
     formularios a traves de modelos
-    
+
 
 32 formulario html post
+    POST envía los datos usando la URL(de forma segura)
+    agregar token en el formulario {% csrf_token %} envia un token desde nuestro sitio a la peticion en el servidor para verificar
+    que la informacion se esta enviando desde el formulario que corresponde
 
 33 formularios a traves de clases
 
