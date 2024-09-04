@@ -440,6 +440,12 @@ en views.py de post:
     que la informacion se esta enviando desde el formulario que corresponde
 
 33 formularios a traves de clases
+    En forms.py, en lugar de escribir HTML directamente, defines un formulario como una clase de Python, y Django se encarga de generar 
+    el HTML necesario para presentarlo en una plantilla.
+
+    proyecto formularios_django
+    
+        crear forms.py para definir los formularios        
 
 34 widget en formularios
 
