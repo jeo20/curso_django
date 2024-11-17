@@ -132,10 +132,15 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
 
     Creamos las vistas:
         Creamos el archivo views.py (contienen la logica y se definen las funciones que se necesiten)
+		
+		def saludo(request):
+			return HttpResponse("Hola, JeO")
     
     Creamos las urls
         Creamos una  url para acceder a esa vista(siempre la terminamos con /), lo hacemos en urls.py  
         dentro de holamundo  y le asignamos el mismo nombre de la funcion
+		
+		    path('saludo/', views.saludo, name='saludo'),
 
     
 06 Rutas con parámetros - Curso Django - OpenBootcamp
@@ -147,18 +152,19 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
     definir ruta en 'DIRS': ['templates'] en TEMPLATES del archivo settings.py
     creamos  una carpeta llamada "templates"
     creamos  un archivo llamado simple.html dentro de templates
-    para utilizarlo desde views debemos importar: from django.shortcuts import render
-    creamos una funcion y devolvemos: return render(request, "simple.html", {}), la funcion render(), recibe 3 parametros(request, pagina html, contexto)
+    para utilizarlo desde views debemos importar: from django.shortcuts import render (render permite renderizar los templates)
+    creamos una funcion y devolvemos: return render(request, "simple.html", {}), la funcion render(), recibe 3 parametros(request, pagina html, contexto(vacio en este ejemplo)
 
 
 08 Uso de contextos - Curso Django - OpenBootcamp
+	El contexto es un diccionario de python
     El contexto es un “conjunto de variables” que envías a tus templates a través de las vistas. 
     Estas variables solo pueden ser accedidas por un template específico.
     
     url definimos el path path('dinamico/<str:name>', views.dinamico, name="dinamico")
     en views.py creamos una funcion que recibe (request, name)
     definimos la variable context = {'name': name}, # guardamos un diccionario con el nombre como clave(name que recibimos de parametro) y lo pasamos al template
-    retorna render(request,"plantilla.html", context)
+    retorna render(request,"plantilla.html", context(le devuelve a la plantilla el valor de name)
     desde adentro dinamico.html para llamar una variable {{name}}
 
 09 Bucles y condicionales en plantillas - Curso Django - OpenBootcamp
@@ -176,11 +182,15 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
 10 Comentarios y filtros - Curso Django - OpenBootcamp
     {# comentario #} comentario de una linea que no se pinta (oculto)
 
-    {% comment "" %}
+    {% comment %}
         Este comentario se ignora y no se muestra en pantalla
         es
         multilineas
     {% endcomment %}
+	
+	{{categories|length}} # filtro para contar el total de las categorias
+	{{ elemento|upper }} # muestra el elemento en mayuscula
+
 
 11 Archivos estaticos - Curso Django - OpenBootcamp
    Archivos css, javascript, imagenes, audios, etc.
@@ -191,7 +201,8 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
    en el archivo html tenemos que usar {% load static %} {# defino que se va a utilizar contenido de la carpeta static #}
    href={% static "styles.css" %} # para usar el archivo styles.css
 
-   crear en settings.py la variable de entorno
+   crear en settings.py la variable de entorno para definir los directorios sobre los archivos estaticos
+   que nuestra configuracion va a tener
         STATICFILES_DIRS = [ # directorio de  los archivos estáticos
             BASE_DIR /"static", #  directorio raiz  de la carpeta static en el proyecto
             '/var/www/static/' # directorio para produccion 
