@@ -212,15 +212,16 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9cl3hhVg_ROOlSY33uuBWZh
     herencia de plantillas es una forma de reutilizar código en plantillas.
     definir rutas en settings.py
     crear carpetas en el proyecto
+	crear vistas
     crear urls
-    crear vistas
-    crear plantillas
+    crear plantillas html
     creamos la carpeta(adentro de templates) layouts,  la plantilla padre que definamos(base.html)
     en base.html definir los bloques para el contenido de cada plantilla
     en la plantilla extender {% extends "./layouts/base.html" %}
     desde la plantilla usar {% block title %} Herencia {% endblock %} para cambiar el bloque
         
 13 Enlaces e inclusion - Curso Django - OpenBootcamp
+	menu y footer
     <li><a href= "{% url 'herencia' %}">Herencia</a></li>  {# link a herencia por name definido en urls.py #}
     
     modularizar el menu y footer
